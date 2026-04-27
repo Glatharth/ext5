@@ -1214,7 +1214,7 @@
 
         const containerDesc = document.getElementById('gallery-description');
         sortedDesc.forEach((img, index) => {
-            const fullSrc = `/img/${img.file}`;
+            const fullSrc = `images/descricao/${img.file}`;
             const extraClass = index === 0 ? 'tall' : '';
 
             containerDesc.innerHTML += `
@@ -1226,7 +1226,7 @@
 
         const containerGal = document.getElementById('gallery-masonry');
         sortedGallery.forEach((img) => {
-            const fullSrc = `/img/${img.file}`;
+            const fullSrc = `images/galeria/${img.file}`;
 
             containerGal.innerHTML += `
         <div class="masonry-item carousel-item" data-src="${fullSrc}" data-caption="${img.caption}">
