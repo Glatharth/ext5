@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inteligência Artificial & Cultura Oceânica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap"
-          rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --ocean-deep: #0a2342;
@@ -98,7 +100,7 @@
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(0, 180, 216, 0.15) 0%, transparent 70%),
-            radial-gradient(ellipse 40% 80% at 20% 80%, rgba(13, 79, 110, 0.5) 0%, transparent 60%);
+                radial-gradient(ellipse 40% 80% at 20% 80%, rgba(13, 79, 110, 0.5) 0%, transparent 60%);
         }
 
         /* Animated background waves */
@@ -134,6 +136,7 @@
             from {
                 transform: translateX(0);
             }
+
             to {
                 transform: translateX(-50%);
             }
@@ -248,9 +251,12 @@
         }
 
         @keyframes scroll-pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0.3
             }
+
             50% {
                 opacity: 1
             }
@@ -813,6 +819,16 @@
             border: 1px solid rgba(0, 180, 216, 0.2);
         }
 
+        .footer-tags a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        .footer-tags a:hover {
+            color: var(--ocean-foam);
+        }
+
         .footer-note {
             font-size: 0.78rem;
             color: rgba(255, 255, 255, 0.3);
@@ -863,6 +879,7 @@
                 opacity: 0.4;
                 transform: scale(0.98);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1);
@@ -894,7 +911,8 @@
             transform: scale(1.1);
         }
 
-        .modal-prev, .modal-next {
+        .modal-prev,
+        .modal-next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -922,7 +940,8 @@
             right: 20px;
         }
 
-        .modal-prev:hover, .modal-next:hover {
+        .modal-prev:hover,
+        .modal-next:hover {
             background-color: var(--ocean-teal);
             color: var(--ocean-deep);
             transform: translateY(-50%) scale(1.1);
@@ -990,420 +1009,619 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* ── PROMPT EXAMPLE ── */
+        #prompt-example {
+            background: #061829;
+            border-top: 1px solid rgba(0, 180, 216, 0.15);
+        }
+
+        .prompt-intro {
+            max-width: 650px;
+            margin-bottom: 2rem;
+        }
+
+        .prompt-intro p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        .prompt-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2.5rem;
+            align-items: start;
+        }
+
+        .prompt-block {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(0, 180, 216, 0.2);
+            border-radius: 8px;
+            padding: 2rem;
+        }
+
+        .prompt-block pre {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.88rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .prompt-tips {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .prompt-tip-card {
+            background: rgba(0, 180, 216, 0.05);
+            border: 1px solid rgba(0, 180, 216, 0.14);
+            border-radius: 8px;
+            padding: 1.2rem 1.4rem;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .prompt-tip-card:hover {
+            border-color: rgba(0, 180, 216, 0.4);
+            transform: translateX(5px);
+        }
+
+        .prompt-tip-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: rgba(0, 180, 216, 0.22);
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+
+        .prompt-tip-card h4 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--ocean-foam);
+            margin-bottom: 0.3rem;
+        }
+
+        .prompt-tip-card p {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 900px) {
+            .prompt-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-<nav>
-    <div class="nav-logo">IA & Cultura Oceânica</div>
-    <ul class="nav-links">
-        <li><a href="#objective">Objetivo</a></li>
-        <li><a href="#description">Descrição</a></li>
-        <li><a href="#sdg">ODS</a></li>
-        <li><a href="#bncc">BNCC</a></li>
-        <li><a href="#gallery">Galeria</a></li>
-        <li><a href="#video">Acesso</a></li>
-    </ul>
-</nav>
+    <nav>
+        <div class="nav-logo">IA & Cultura Oceânica</div>
+        <ul class="nav-links">
+            <li><a href="#objective">Objetivo</a></li>
+            <li><a href="#description">Descrição</a></li>
+            <li><a href="#sdg">ODS</a></li>
+            <li><a href="#bncc">BNCC</a></li>
+            <li><a href="#gallery">Galeria</a></li>
+            <li><a href="#video">Acesso</a></li>
+        </ul>
+    </nav>
 
-<section class="hero">
-    <div class="hero-content">
-        <p class="hero-eyebrow fade-up">Portfólio Educacional · 2025</p>
-        <h1 class="fade-up delay-1">
-            Inteligência Artificial<br>&amp; <em>Cultura Oceânica</em>
-        </h1>
-        <p class="hero-desc fade-up delay-2">
-            Aprender sobre o oceano nunca foi tão criativo e fluído! Do laboratório à praia, a inteligência artificial conecta conhecimento e ação. Aprenda, inspire-se e participe da revolução que une tecnologia e vida marinha.
-        </p>
-        <div class="hero-cta fade-up delay-3">
-            <a href="#objective" class="btn btn-primary">Explorar Portfólio</a>
-            <a href="#video" class="btn btn-outline">Ver Demonstração</a>
-        </div>
-    </div>
-    <div class="waves-bg">
-        <div class="wave"></div>
-        <div class="wave"></div>
-    </div>
-    <div class="hero-scroll">
-        <div class="scroll-line"></div>
-        scroll
-    </div>
-</section>
-
-<section id="objective">
-    <div class="objective-grid">
-        <div class="objective-text">
-            <p class="section-label">01 — Objetivo</p>
-            <h2 class="section-title">A ponte entre a tecnologia e o mundo natural</h2>
-            <p>
-                A inteligência artificial não é apenas sobre máquinas — é uma ponte para compreender o mundo natural. Ao unir IA e cultura oceânica, podemos monitorar ecossistemas, proteger espécies ameaçadas e inspirar novas formas de interação com o oceano.
+    <section class="hero">
+        <div class="hero-content">
+            <p class="hero-eyebrow fade-up">Portfólio Educacional · 2025</p>
+            <h1 class="fade-up delay-1">
+                Inteligência Artificial<br>&amp; <em>Cultura Oceânica</em>
+            </h1>
+            <p class="hero-desc fade-up delay-2">
+                Aprender sobre o oceano nunca foi tão criativo e fluído! Do laboratório à praia, a inteligência
+                artificial conecta conhecimento e ação. Aprenda, inspire-se e participe da revolução que une tecnologia
+                e vida marinha.
             </p>
-            <p>
-                A Inteligência Artificial pode transformar suas ideias em materiais incríveis para a conscientização ambiental. Use a tecnologia para espalhar a mensagem da Cultura Oceânica!
-            </p>
+            <div class="hero-cta fade-up delay-3">
+                <a href="#objective" class="btn btn-primary">Explorar Portfólio</a>
+                <a href="#video" class="btn btn-outline">Ver Demonstração</a>
+            </div>
         </div>
-        <div class="objective-card">
-            <h3>🎯 Conscientização Ambiental</h3>
-            <p>
-                Nossas escolhas em terra determinam o futuro da vida no mar. O lixo que você joga fora não desaparece. Ele pode parar no habitat de uma tartaruga. Proteger os oceanos é proteger a nós mesmos, pense nisso.
-            </p>
+        <div class="waves-bg">
+            <div class="wave"></div>
+            <div class="wave"></div>
         </div>
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            scroll
+        </div>
+    </section>
+
+    <section id="objective">
+        <div class="objective-grid">
+            <div class="objective-text">
+                <p class="section-label">01 — Objetivo</p>
+                <h2 class="section-title">A ponte entre a tecnologia e o mundo natural</h2>
+                <p>
+                    A inteligência artificial não é apenas sobre máquinas — é uma ponte para compreender o mundo
+                    natural. Ao unir IA e cultura oceânica, podemos monitorar ecossistemas, proteger espécies ameaçadas
+                    e inspirar novas formas de interação com o oceano.
+                </p>
+                <p>
+                    A Inteligência Artificial pode transformar suas ideias em materiais incríveis para a conscientização
+                    ambiental. Use a tecnologia para espalhar a mensagem da Cultura Oceânica!
+                </p>
+            </div>
+            <div class="objective-card">
+                <h3>🎯 Conscientização Ambiental</h3>
+                <p>
+                    Nossas escolhas em terra determinam o futuro da vida no mar. O lixo que você joga fora não
+                    desaparece. Ele pode parar no habitat de uma tartaruga. Proteger os oceanos é proteger a nós mesmos,
+                    pense nisso.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="description">
+        <div class="desc-grid">
+            <div class="desc-text">
+                <p class="section-label">02 — Descrição</p>
+                <h2 class="section-title">Como a IA potencializa a Cultura Oceânica</h2>
+                <p>
+                    A inteligência artificial abre novas portas para compreender e proteger os oceanos. Conheça o poder
+                    da tecnologia a serviço da vida marinha.
+                </p>
+                <p>
+                    Os estudantes passam por diversas etapas tecnológicas que contribuem para o desenvolvimento de
+                    competências científicas e digitais de forma integrada.
+                </p>
+                <ul class="features-list">
+                    <li>
+                        <span class="feat-icon">💬</span>
+                        <div class="feat-text">
+                            <strong>O que são Prompts?</strong>
+                            <span>Use "prompts", que são comandos de texto para a IA. Peça o que você imagina!</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feat-icon">🛠️</span>
+                        <div class="feat-text">
+                            <strong>Ferramentas Utilizadas</strong>
+                            <span>Fotor, Crello, Visme, DesignHill e ChatGPT.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feat-icon">🌊</span>
+                        <div class="feat-text">
+                            <strong>Revolução Tecnológica</strong>
+                            <span>Aprenda, inspire-se e participe da revolução que une tecnologia e vida marinha.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="desc-visual" id="gallery-description"></div>
+
+        </div>
+    </section>
+
+    <section id="sdg">
+        <div class="sdg-intro">
+            <p class="section-label">03 — ODS</p>
+            <h2 class="section-title">Objetivos de Desenvolvimento Sustentável</h2>
+            <p>O projeto se articula com múltiplos ODS da Agenda 2030 da ONU, contribuindo para metas globais de
+                educação, conservação marinha e ação climática através da IA.</p>
+        </div>
+        <div class="sdg-grid">
+            <div class="sdg-card sdg-14">
+                <div class="sdg-num">14</div>
+                <h4>Vida na Água</h4>
+                <p>Conscientização sobre conservação e uso sustentável dos oceanos e recursos marinhos.</p>
+            </div>
+            <div class="sdg-card sdg-4">
+                <div class="sdg-num">4</div>
+                <h4>Educação de Qualidade</h4>
+                <p>Promoção de aprendizagem inclusiva, equitativa e de qualidade para todos os estudantes.</p>
+            </div>
+            <div class="sdg-card sdg-13">
+                <div class="sdg-num">13</div>
+                <h4>Ação Climática</h4>
+                <p>Fortalecimento da resiliência e da capacidade adaptativa às mudanças climáticas.</p>
+            </div>
+            <div class="sdg-card sdg-17">
+                <div class="sdg-num">17</div>
+                <h4>Parcerias e Meios de Implementação</h4>
+                <p>Fortalecimento dos meios de implementação e revitalização da parceria global.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="bncc">
+        <div class="bncc-intro">
+            <p class="section-label">04 — BNCC</p>
+            <h2 class="section-title">Relação com a Base Nacional Comum Curricular</h2>
+            <p>O projeto está alinhado a competências e habilidades da BNCC, promovendo aprendizagens integradas entre
+                Ciências da Natureza, Tecnologia e Meio Ambiente.</p>
+        </div>
+        <div class="bncc-grid">
+            <div class="bncc-card">
+                <span class="bncc-tag">Ciências</span>
+                <h4>Vida e Evolução · Terra e Universo</h4>
+                <p>EF07CI11 / EF09CI13 — Identificar relações entre os componentes bióticos e abióticos dos
+                    ecossistemas, especialmente marinhos.</p>
+            </div>
+            <div class="bncc-card">
+                <span class="bncc-tag">Língua Portuguesa</span>
+                <h4>Campos de Atuação Social</h4>
+                <p>EF69LP44 — Produção de textos multimodais (folhetos) com adequação ao campo de atuação, gênero e
+                    propósito comunicativo.</p>
+            </div>
+            <div class="bncc-card">
+                <span class="bncc-tag">Arte</span>
+                <h4>Linguagens Artísticas</h4>
+                <p>EF69AR05 — Experimentar e desenvolver habilidades em artes visuais, incluindo linguagem dos
+                    quadrinhos e
+                    narrativa sequencial.</p>
+            </div>
+            <div class="bncc-card">
+                <span class="bncc-tag">Tecnologia</span>
+                <h4>Computação e Cultura Digital</h4>
+                <p>Competência 5 BNCC — Utilização de tecnologias digitais de forma crítica, significativa e ética na
+                    produção cultural.</p>
+            </div>
+            <div class="bncc-card">
+                <span class="bncc-tag">Competências Gerais</span>
+                <h4>Pensamento Científico e Crítico</h4>
+                <p>CG02 — Exercitar a curiosidade intelectual e usar as ciências para investigar causas, elaborar e
+                    testar hipóteses sobre o oceano.</p>
+            </div>
+            <div class="bncc-card">
+                <span class="bncc-tag">Competências Gerais</span>
+                <h4>Responsabilidade e Cidadania</h4>
+                <p>CG10 — Agir pessoal e coletivamente com autonomia e responsabilidade para a construção de uma
+                    sociedade
+                    justa e sustentável.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="gallery-intro">
+            <p class="section-label">05 — Galeria</p>
+            <h2 class="section-title">Imagens do Projeto</h2>
+            <p>Registros das etapas de criação e exploração visual.</p>
+        </div>
+
+        <div class="masonry" id="gallery-masonry"></div>
+
+    </section>
+
+    <section id="prompt-example">
+        <div class="prompt-intro">
+            <p class="section-label">06 — Exemplo de Prompt</p>
+            <h2 class="section-title">Como construir um bom prompt</h2>
+            <p>Veja abaixo o modelo que utilizamos para gerar nosso folheto de Cultura Oceânica.</p>
+        </div>
+
+        <div class="prompt-wrapper">
+
+            <div class="prompt-block">
+                <pre>Crie um folheto digital de 2 páginas com tema
+"Inteligência Artificial & Cultura Oceânica",
+com design moderno e impactante.
+
+— Identidade Visual —
+Paleta: azul marinho escuro (#0a1628) como fundo,
+azul-turquesa (#1a8fa0) nos cards, texto em branco.
+Tipografia sans-serif moderna, títulos em negrito itálico.
+Estilo: clean, oceânico e educativo.
+
+— Página 1: Introdução e Conceito —
+Layout em grade (3 colunas × 2 linhas),
+alternando imagens e blocos de texto.
+
+Título: "Mergulhe no Conhecimento:
+Inteligência Artificial & Cultura Oceânica"
+Subtítulo: "Aprender sobre o oceano nunca foi tão criativo!"
+
+Imagem central: tartaruga marinha nadando sobre
+recife de coral colorido, iluminação subaquática.
+
+Cards de texto:
+- "A IA é uma ponte para compreender o mundo natural."
+- "Do laboratório à praia, a IA conecta conhecimento e ação."
+- "A IA abre novas portas para proteger os oceanos."
+
+— Página 2: Conscientização e Recursos —
+Frases de impacto:
+- "Nossas escolhas em terra determinam o futuro do mar."
+- "O lixo que você joga fora pode parar no habitat de uma tartaruga."
+- "Proteger os oceanos é proteger a nós mesmos."
+
+Ferramentas: Fotor, Crello, Visme, DesignHill, ChatGPT.
+Extras: QR Code e lista de integrantes do projeto.
+
+— Parâmetros Técnicos —
+Formato: A3 paisagem ou 1920×1080px por página.
+Bordas arredondadas, sombras suaves, textura de ondas.
+Tom: educativo e atraente para o público jovem.</pre>
+            </div>
+
+            <div class="prompt-tips">
+                <div class="prompt-tip-card">
+                    <div class="prompt-tip-num">01</div>
+                    <h4>Defina o formato e o objetivo</h4>
+                    <p>Especifique o tipo de material, número de páginas e tema central. Quanto mais claro o objetivo,
+                        melhor o resultado.</p>
+                </div>
+                <div class="prompt-tip-card">
+                    <div class="prompt-tip-num">02</div>
+                    <h4>Descreva a identidade visual</h4>
+                    <p>Informe cores, tipografia e estilo geral. A IA responde bem a referências visuais concretas.</p>
+                </div>
+                <div class="prompt-tip-card">
+                    <div class="prompt-tip-num">03</div>
+                    <h4>Estruture o conteúdo por seções</h4>
+                    <p>Organize em blocos — título, imagens, textos, extras. Isso ajuda a IA a manter coerência ao longo
+                        do material.</p>
+                </div>
+                <div class="prompt-tip-card">
+                    <div class="prompt-tip-num">04</div>
+                    <h4>Indique o público e o tom</h4>
+                    <p>"Tom educativo para jovens" direciona o estilo e o nível de complexidade do resultado.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="video">
+        <div class="video-inner">
+            <div class="video-text">
+                <p class="section-label">07 — Acesso</p>
+                <h2 class="section-title">Acesse para mais informações!</h2>
+                <p>
+                    Utilize o QR Code ao lado ou acesse nosso conteúdo completo para descobrir como utilizamos o poder
+                    da Inteligência Artificial em prol do conhecimento e da Cultura Oceânica.
+                </p>
+                <a href="https://www.canva.com/design/DAGz2OZY1KM/LtX0DjCmx4cuIQdHcm-a7w/view?utm_content=DAGz2OZY1KM&utm_campaign=designshare&utm_medium=link&utm_source=viewer"
+                    target="_blank" class="btn btn-primary">Ir para apresentação</a>
+            </div>
+
+            <div class="qr-player">
+                <img src="images/qrcodeapresetacao.png" alt="QR Code">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-brand">
+            Cultura Oceânica em Folhetos
+            <span>Projeto de Extensão — IFSP-SJBV SBVEXT4 · 2025</span>
+        </div>
+        <div class="footer-tags">
+            <span class="tag">
+                <a href="https://www.linkedin.com/in/caio-canalli-8a7161324/">Caio Canalli</a>
+            </span>
+            <span class="tag">
+                <a href="https://www.linkedin.com/in/davi-beli-rosa/">Davi Beli</a>
+            </span>
+            <span class="tag">
+                <a href="https://www.linkedin.com/in/filipe-fiorio-472123302/">Filipe Fiorio</a>
+            </span>
+            <span class="tag">
+                <a href="https://www.linkedin.com/in/gustavo-mastelaro-681140301">Gustavo Mastelaro</a>
+            </span>
+            <span class="tag">
+                <a href="https://www.linkedin.com/in/paulo-henrique-lisboa">Paulo Henrique</a>
+            </span>
+            <span class="tag">
+                <a href="https://www.linkedin.com/in/rodrigo-costa-garcia-a0ab34300/">Rodrigo Garcia</a>
+            </span>
+        </div>
+    </footer>
+
+    <div id="image-modal" class="modal">
+        <button class="modal-close" aria-label="Fechar" onclick="closeModal()">&times;</button>
+        <button class="modal-prev" aria-label="Anterior" onclick="changeImage(-1)">&#10094;</button>
+
+        <div class="modal-body">
+            <img class="modal-content" id="modal-img" src="" alt="Imagem ampliada">
+            <div id="modal-caption"></div>
+        </div>
+
+        <button class="modal-next" aria-label="Próxima" onclick="changeImage(1)">&#10095;</button>
     </div>
-</section>
 
-<section id="description">
-    <div class="desc-grid">
-        <div class="desc-text">
-            <p class="section-label">02 — Descrição</p>
-            <h2 class="section-title">Como a IA potencializa a Cultura Oceânica</h2>
-            <p>
-                A inteligência artificial abre novas portas para compreender e proteger os oceanos. Conheça o poder da tecnologia a serviço da vida marinha.
-            </p>
-            <p>
-                Os estudantes passam por diversas etapas tecnológicas que contribuem para o desenvolvimento de competências científicas e digitais de forma integrada.
-            </p>
-            <ul class="features-list">
-                <li>
-                    <span class="feat-icon">💬</span>
-                    <div class="feat-text">
-                        <strong>O que são Prompts?</strong>
-                        <span>Use "prompts", que são comandos de texto para a IA. Peça o que você imagina!</span>
-                    </div>
-                </li>
-                <li>
-                    <span class="feat-icon">🛠️</span>
-                    <div class="feat-text">
-                        <strong>Ferramentas Utilizadas</strong>
-                        <span>Fotor, Crello, Visme, DesignHill e ChatGPT.</span>
-                    </div>
-                </li>
-                <li>
-                    <span class="feat-icon">🌊</span>
-                    <div class="feat-text">
-                        <strong>Revolução Tecnológica</strong>
-                        <span>Aprenda, inspire-se e participe da revolução que une tecnologia e vida marinha.</span>
-                    </div>
-                </li>
-            </ul>
-        </div>
+    <script>
+        // ==========================================
+        // IMAGE DATABASE CONFIGURATION
+        // ==========================================
 
-        <div class="desc-visual" id="gallery-description"></div>
+        const descriptionImages = [
+            { file: 'tartaruga1.jpeg', caption: '' },
+            { file: 'tartaruga2.jpeg', caption: '' },
+            { file: 'tartaruga3.jpeg', caption: '' },
+        ];
 
-    </div>
-</section>
+        const galleryImages = [
+            { file: '1.jpeg', caption: '' },
+            { file: '2.jpeg', caption: '' },
+            { file: '3.jpeg', caption: '' },
+            { file: '4.jpeg', caption: '' }
+        ];
 
-<section id="sdg">
-    <div class="sdg-intro">
-        <p class="section-label">03 — ODS</p>
-        <h2 class="section-title">Objetivos de Desenvolvimento Sustentável</h2>
-        <p>O projeto se articula com múltiplos ODS da Agenda 2030 da ONU, contribuindo para metas globais de educação, conservação marinha e ação climática através da IA.</p>
-    </div>
-    <div class="sdg-grid">
-        <div class="sdg-card sdg-14">
-            <div class="sdg-num">14</div>
-            <h4>Vida na Água</h4>
-            <p>Conscientização sobre conservação e uso sustentável dos oceanos e recursos marinhos.</p>
-        </div>
-        <div class="sdg-card sdg-4">
-            <div class="sdg-num">4</div>
-            <h4>Educação de Qualidade</h4>
-            <p>Promoção de aprendizagem inclusiva, equitativa e de qualidade para todos os estudantes.</p>
-        </div>
-        <div class="sdg-card sdg-13">
-            <div class="sdg-num">13</div>
-            <h4>Ação Climática</h4>
-            <p>Fortalecimento da resiliência e da capacidade adaptativa às mudanças climáticas.</p>
-        </div>
-        <div class="sdg-card sdg-17">
-            <div class="sdg-num">17</div>
-            <h4>Parcerias e Meios de Implementação</h4>
-            <p>Fortalecimento dos meios de implementação e revitalização da parceria global.</p>
-        </div>
-    </div>
-</section>
+        // ==========================================
+        // HTML GENERATOR
+        // ==========================================
 
-<section id="bncc">
-    <div class="bncc-intro">
-        <p class="section-label">04 — BNCC</p>
-        <h2 class="section-title">Relação com a Base Nacional Comum Curricular</h2>
-        <p>O projeto está alinhado a competências e habilidades da BNCC, promovendo aprendizagens integradas entre Ciências da Natureza, Tecnologia e Meio Ambiente.</p>
-    </div>
-    <div class="bncc-grid">
-        <div class="bncc-card">
-            <span class="bncc-tag">Ciências</span>
-            <h4>Vida e Evolução · Terra e Universo</h4>
-            <p>EF07CI11 / EF09CI13 — Identificar relações entre os componentes bióticos e abióticos dos ecossistemas, especialmente marinhos.</p>
-        </div>
-        <div class="bncc-card">
-            <span class="bncc-tag">Língua Portuguesa</span>
-            <h4>Campos de Atuação Social</h4>
-            <p>EF69LP44 — Produção de textos multimodais (quadrinhos) com adequação ao campo de atuação, gênero e
-                propósito comunicativo.</p>
-        </div>
-        <div class="bncc-card">
-            <span class="bncc-tag">Arte</span>
-            <h4>Linguagens Artísticas</h4>
-            <p>EF69AR05 — Experimentar e desenvolver habilidades em artes visuais, incluindo linguagem dos quadrinhos e
-                narrativa sequencial.</p>
-        </div>
-        <div class="bncc-card">
-            <span class="bncc-tag">Tecnologia</span>
-            <h4>Computação e Cultura Digital</h4>
-            <p>Competência 5 BNCC — Utilização de tecnologias digitais de forma crítica, significativa e ética na produção cultural.</p>
-        </div>
-        <div class="bncc-card">
-            <span class="bncc-tag">Competências Gerais</span>
-            <h4>Pensamento Científico e Crítico</h4>
-            <p>CG02 — Exercitar a curiosidade intelectual e usar as ciências para investigar causas, elaborar e testar hipóteses sobre o oceano.</p>
-        </div>
-        <div class="bncc-card">
-            <span class="bncc-tag">Competências Gerais</span>
-            <h4>Responsabilidade e Cidadania</h4>
-            <p>CG10 — Agir pessoal e coletivamente com autonomia e responsabilidade para a construção de uma sociedade
-                justa e sustentável.</p>
-        </div>
-    </div>
-</section>
+        function renderImages() {
+            const sortedDesc = descriptionImages.sort((a, b) => a.file.localeCompare(b.file));
+            const sortedGallery = galleryImages.sort((a, b) => a.file.localeCompare(b.file));
 
-<section id="gallery">
-    <div class="gallery-intro">
-        <p class="section-label">05 — Galeria</p>
-        <h2 class="section-title">Imagens do Projeto</h2>
-        <p>Registros das etapas de criação e exploração visual.</p>
-    </div>
+            const containerDesc = document.getElementById('gallery-description');
+            sortedDesc.forEach((img, index) => {
+                const fullSrc = `images/descricao/${img.file}`;
+                const extraClass = index === 0 ? 'tall' : '';
 
-    <div class="masonry" id="gallery-masonry"></div>
-
-</section>
-
-<section id="video">
-    <div class="video-inner">
-        <div class="video-text">
-            <p class="section-label">06 — Acesso</p>
-            <h2 class="section-title">Acesse para mais informações!</h2>
-            <p>
-                Utilize o QR Code ao lado ou acesse nosso conteúdo completo para descobrir como utilizamos o poder da Inteligência Artificial em prol do conhecimento e da Cultura Oceânica.
-            </p>
-            <a href="https://www.canva.com/design/DAGz2OZY1KM/LtX0DjCmx4cuIQdHcm-a7w/view?utm_content=DAGz2OZY1KM&utm_campaign=designshare&utm_medium=link&utm_source=viewer" target="_blank" class="btn btn-primary">Ir para apresentação</a>
-        </div>
-
-        <div class="qr-player">
-            <img src="images/qrcodeapresetacao.png" alt="QR Code">
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="footer-brand">
-        IA & Cultura Oceânica
-        <span>Portfólio Educacional · Projeto com IA · 2025</span>
-    </div>
-    <div class="footer-tags">
-        <span class="tag">ODS 14</span>
-        <span class="tag">ODS 4</span>
-        <span class="tag">BNCC</span>
-        <span class="tag">IA Educacional</span>
-        <span class="tag">Cultura Oceânica</span>
-    </div>
-    <p class="footer-note">Trabalho Universitário</p>
-</footer>
-
-<div id="image-modal" class="modal">
-    <button class="modal-close" aria-label="Fechar" onclick="closeModal()">&times;</button>
-    <button class="modal-prev" aria-label="Anterior" onclick="changeImage(-1)">&#10094;</button>
-
-    <div class="modal-body">
-        <img class="modal-content" id="modal-img" src="" alt="Imagem ampliada">
-        <div id="modal-caption"></div>
-    </div>
-
-    <button class="modal-next" aria-label="Próxima" onclick="changeImage(1)">&#10095;</button>
-</div>
-
-<script>
-    // ==========================================
-    // IMAGE DATABASE CONFIGURATION
-    // ==========================================
-
-    const descriptionImages = [
-        { file: 'tartaruga1.jpeg', caption: '' },
-        { file: 'tartaruga2.jpeg', caption: '' },
-        { file: 'tartaruga3.jpeg', caption: '' },
-    ];
-
-    const galleryImages = [
-        { file: '1.jpeg', caption: '' },
-        { file: '2.jpeg', caption: '' },
-        { file: '3.jpeg', caption: '' },
-        { file: '4.jpeg', caption: '' }
-    ];
-
-    // ==========================================
-    // HTML GENERATOR
-    // ==========================================
-
-    function renderImages() {
-        const sortedDesc = descriptionImages.sort((a, b) => a.file.localeCompare(b.file));
-        const sortedGallery = galleryImages.sort((a, b) => a.file.localeCompare(b.file));
-
-        const containerDesc = document.getElementById('gallery-description');
-        sortedDesc.forEach((img, index) => {
-            const fullSrc = `images/descricao/${img.file}`;
-            const extraClass = index === 0 ? 'tall' : '';
-
-            containerDesc.innerHTML += `
+                containerDesc.innerHTML += `
         <div class="img-placeholder ${extraClass} carousel-item" data-src="${fullSrc}" data-caption="${img.caption}">
           <img src="${fullSrc}" alt="${img.caption}">
         </div>
       `;
-        });
+            });
 
-        const containerGal = document.getElementById('gallery-masonry');
-        sortedGallery.forEach((img) => {
-            const fullSrc = `images/galeria/${img.file}`;
+            const containerGal = document.getElementById('gallery-masonry');
+            sortedGallery.forEach((img) => {
+                const fullSrc = `images/galeria/${img.file}`;
 
-            containerGal.innerHTML += `
+                containerGal.innerHTML += `
         <div class="masonry-item carousel-item" data-src="${fullSrc}" data-caption="${img.caption}">
           <img src="${fullSrc}" alt="${img.caption}">
         </div>
       `;
-        });
-    }
+            });
+        }
 
-    renderImages();
+        renderImages();
 
-    // ==========================================
-    // MODAL CAROUSEL LOGIC
-    // ==========================================
+        // ==========================================
+        // MODAL CAROUSEL LOGIC
+        // ==========================================
 
-    const modal = document.getElementById("image-modal");
-    const modalImg = document.getElementById("modal-img");
-    const modalCaption = document.getElementById("modal-caption");
-    const prevBtn = document.querySelector('.modal-prev');
-    const nextBtn = document.querySelector('.modal-next');
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-img");
+        const modalCaption = document.getElementById("modal-caption");
+        const prevBtn = document.querySelector('.modal-prev');
+        const nextBtn = document.querySelector('.modal-next');
 
-    let currentImages = [];
-    let currentIndex = 0;
-    let touchStartX = 0;
-    let touchEndX = 0;
+        let currentImages = [];
+        let currentIndex = 0;
+        let touchStartX = 0;
+        let touchEndX = 0;
 
-    function initCarousel() {
-        const galleries = [
-            document.getElementById('gallery-description'),
-            document.getElementById('gallery-masonry')
-        ];
+        function initCarousel() {
+            const galleries = [
+                document.getElementById('gallery-description'),
+                document.getElementById('gallery-masonry')
+            ];
 
-        galleries.forEach(gallery => {
-            if (!gallery) return;
-            const items = gallery.querySelectorAll('.carousel-item');
+            galleries.forEach(gallery => {
+                if (!gallery) return;
+                const items = gallery.querySelectorAll('.carousel-item');
 
-            items.forEach((item) => {
-                item.addEventListener('click', (e) => {
-                    const src = item.getAttribute('data-src');
+                items.forEach((item) => {
+                    item.addEventListener('click', (e) => {
+                        const src = item.getAttribute('data-src');
 
-                    if (!src || src.trim() === '') return;
-                    e.preventDefault();
+                        if (!src || src.trim() === '') return;
+                        e.preventDefault();
 
-                    const validItems = Array.from(items).filter(i => {
-                        const s = i.getAttribute('data-src');
-                        return s && s.trim() !== '';
+                        const validItems = Array.from(items).filter(i => {
+                            const s = i.getAttribute('data-src');
+                            return s && s.trim() !== '';
+                        });
+
+                        currentImages = validItems.map(i => ({
+                            src: i.getAttribute('data-src'),
+                            caption: i.getAttribute('data-caption') || ''
+                        }));
+
+                        currentIndex = validItems.indexOf(item);
+
+                        if (currentIndex !== -1) {
+                            showModal();
+                        }
                     });
-
-                    currentImages = validItems.map(i => ({
-                        src: i.getAttribute('data-src'),
-                        caption: i.getAttribute('data-caption') || ''
-                    }));
-
-                    currentIndex = validItems.indexOf(item);
-
-                    if (currentIndex !== -1) {
-                        showModal();
-                    }
                 });
             });
+        }
+
+        function showModal() {
+            modal.classList.add('active');
+            triggerImageAnimation();
+            updateModalContent();
+            document.body.style.overflow = 'hidden';
+        }
+
+        window.closeModal = function () {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            setTimeout(() => {
+                modalImg.src = '';
+            }, 300);
+        }
+
+        window.changeImage = function (step) {
+            if (currentImages.length <= 1) return;
+            currentIndex += step;
+
+            if (currentIndex >= currentImages.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = currentImages.length - 1;
+
+            triggerImageAnimation();
+            updateModalContent();
+        }
+
+        function triggerImageAnimation() {
+            modalImg.style.animation = 'none';
+            void modalImg.offsetWidth;
+            modalImg.style.animation = 'imageTransition 0.3s ease-out forwards';
+        }
+
+        function updateModalContent() {
+            const imgData = currentImages[currentIndex];
+            modalImg.src = imgData.src;
+            modalCaption.innerHTML = imgData.caption;
+
+            if (currentImages.length <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+            }
+        }
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal || e.target.classList.contains('modal-body')) {
+                closeModal();
+            }
         });
-    }
 
-    function showModal() {
-        modal.classList.add('active');
-        triggerImageAnimation();
-        updateModalContent();
-        document.body.style.overflow = 'hidden';
-    }
+        document.addEventListener('keydown', function (e) {
+            if (!modal.classList.contains('active')) return;
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowRight') changeImage(1);
+            if (e.key === 'ArrowLeft') changeImage(-1);
+        });
 
-    window.closeModal = function () {
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-        setTimeout(() => {
-            modalImg.src = '';
-        }, 300);
-    }
+        modal.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
 
-    window.changeImage = function (step) {
-        if (currentImages.length <= 1) return;
-        currentIndex += step;
+        modal.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
 
-        if (currentIndex >= currentImages.length) currentIndex = 0;
-        if (currentIndex < 0) currentIndex = currentImages.length - 1;
-
-        triggerImageAnimation();
-        updateModalContent();
-    }
-
-    function triggerImageAnimation() {
-        modalImg.style.animation = 'none';
-        void modalImg.offsetWidth;
-        modalImg.style.animation = 'imageTransition 0.3s ease-out forwards';
-    }
-
-    function updateModalContent() {
-        const imgData = currentImages[currentIndex];
-        modalImg.src = imgData.src;
-        modalCaption.innerHTML = imgData.caption;
-
-        if (currentImages.length <= 1) {
-            prevBtn.style.display = 'none';
-            nextBtn.style.display = 'none';
-        } else {
-            prevBtn.style.display = 'flex';
-            nextBtn.style.display = 'flex';
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                changeImage(1);
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                changeImage(-1);
+            }
         }
-    }
 
-    modal.addEventListener('click', function (e) {
-        if (e.target === modal || e.target.classList.contains('modal-body')) {
-            closeModal();
-        }
-    });
-
-    document.addEventListener('keydown', function (e) {
-        if (!modal.classList.contains('active')) return;
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowRight') changeImage(1);
-        if (e.key === 'ArrowLeft') changeImage(-1);
-    });
-
-    modal.addEventListener('touchstart', e => {
-        touchStartX = e.changedTouches[0].screenX;
-    }, {passive: true});
-
-    modal.addEventListener('touchend', e => {
-        touchEndX = e.changedTouches[0].screenX;
-        handleSwipe();
-    }, {passive: true});
-
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        if (touchEndX < touchStartX - swipeThreshold) {
-            changeImage(1);
-        }
-        if (touchEndX > touchStartX + swipeThreshold) {
-            changeImage(-1);
-        }
-    }
-
-    initCarousel();
-</script>
+        initCarousel();
+    </script>
 
 </body>
+
 </html>
