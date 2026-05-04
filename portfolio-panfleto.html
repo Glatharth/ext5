@@ -685,15 +685,23 @@
             border-color: var(--ocean-teal);
         }
 
+        .video-player img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
         .video-overlay {
+            display: none;
             position: absolute;
             inset: 0;
             background: radial-gradient(ellipse at center, rgba(0, 180, 216, 0.1), transparent);
-            display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 1rem;
+            pointer-events: none;
         }
 
         .play-btn {
@@ -721,6 +729,7 @@
         }
 
         .video-label {
+            display: none;
             position: absolute;
             top: 1rem;
             left: 1rem;
@@ -731,6 +740,34 @@
             text-transform: uppercase;
             padding: 0.3rem 0.8rem;
             border-radius: 4px;
+        }
+
+        .qr-player {
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--white);
+            border: 1px solid rgba(0, 180, 216, 0.3);
+            aspect-ratio: 1/1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: border-color 0.3s;
+            padding: 2rem;
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .qr-player img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .qr-player:hover {
+            border-color: var(--ocean-teal);
         }
 
         /* ── FOOTER ── */
@@ -1147,14 +1184,11 @@
             <p>
                 Utilize o QR Code ao lado ou acesse nosso conteúdo completo para descobrir como utilizamos o poder da Inteligência Artificial em prol do conhecimento e da Cultura Oceânica.
             </p>
-            <a href="#" class="btn btn-primary">↓ Baixar apresentação</a>
+            <a href="https://www.canva.com/design/DAGz2OZY1KM/LtX0DjCmx4cuIQdHcm-a7w/view?utm_content=DAGz2OZY1KM&utm_campaign=designshare&utm_medium=link&utm_source=viewer" target="_blank" class="btn btn-primary">Ir para apresentação</a>
         </div>
-        <div class="video-player">
-            <div class="video-label">▶ Demonstração</div>
-            <div class="video-overlay">
-                <div class="play-btn">▶</div>
-                <p class="video-caption">Apresentação com IA</p>
-            </div>
+
+        <div class="qr-player">
+            <img src="images/qrcodeapresetacao.png" alt="QR Code">
         </div>
     </div>
 </section>
