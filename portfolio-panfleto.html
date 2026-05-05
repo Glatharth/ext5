@@ -1012,8 +1012,8 @@
 
         /* ── PROMPT EXAMPLE ── */
         #prompt-example {
-            background: #061829;
-            border-top: 1px solid rgba(0, 180, 216, 0.15);
+            background: var(--sand);
+            border-top: 1px solid rgba(13, 79, 110, 0.2);
         }
 
         .prompt-intro {
@@ -1022,10 +1022,22 @@
         }
 
         .prompt-intro p {
-            color: rgba(255, 255, 255, 0.7);
+            color: var(--text-mid);
             line-height: 1.7;
             margin-top: 1rem;
             font-size: 1rem;
+        }
+
+        #prompt-example .section-label {
+            color: var(--ocean-mid);
+        }
+
+        #prompt-example .section-label::before {
+            background: var(--ocean-mid);
+        }
+
+        #prompt-example .section-title {
+            color: var(--text-dark);
         }
 
         .prompt-wrapper {
@@ -1036,8 +1048,8 @@
         }
 
         .prompt-block {
-            background: rgba(0, 0, 0, 0.35);
-            border: 1px solid rgba(0, 180, 216, 0.2);
+            background: var(--white);
+            border: 1px solid rgba(13, 79, 110, 0.2);
             border-radius: 8px;
             padding: 2rem;
         }
@@ -1046,7 +1058,7 @@
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.88rem;
             line-height: 1.8;
-            color: rgba(255, 255, 255, 0.8);
+            color: var(--text-mid);
             white-space: pre-wrap;
             word-break: break-word;
         }
@@ -1058,15 +1070,15 @@
         }
 
         .prompt-tip-card {
-            background: rgba(0, 180, 216, 0.05);
-            border: 1px solid rgba(0, 180, 216, 0.14);
+            background: rgba(13, 79, 110, 0.06);
+            border: 1px solid rgba(13, 79, 110, 0.15);
             border-radius: 8px;
             padding: 1.2rem 1.4rem;
             transition: border-color 0.3s, transform 0.3s;
         }
 
         .prompt-tip-card:hover {
-            border-color: rgba(0, 180, 216, 0.4);
+            border-color: var(--ocean-mid);
             transform: translateX(5px);
         }
 
@@ -1074,7 +1086,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
             font-weight: 900;
-            color: rgba(0, 180, 216, 0.22);
+            color: rgba(13, 79, 110, 0.2);
             line-height: 1;
             margin-bottom: 0.3rem;
         }
@@ -1082,13 +1094,13 @@
         .prompt-tip-card h4 {
             font-size: 0.9rem;
             font-weight: 600;
-            color: var(--ocean-foam);
+            color: var(--text-dark);
             margin-bottom: 0.3rem;
         }
 
         .prompt-tip-card p {
             font-size: 0.82rem;
-            color: rgba(255, 255, 255, 0.55);
+            color: var(--text-mid);
             line-height: 1.6;
         }
 
@@ -1405,22 +1417,25 @@ Tom: educativo e atraente para o público jovem.</pre>
         </div>
         <div class="footer-tags">
             <span class="tag">
-                <a href="https://www.linkedin.com/in/caio-canalli-8a7161324/">Caio Canalli</a>
+                <a target="_blank" href="https://www.linkedin.com/in/caio-canalli-8a7161324/">Caio Canalli</a>
             </span>
             <span class="tag">
-                <a href="https://www.linkedin.com/in/davi-beli-rosa/">Davi Beli</a>
+                <a target="_blank" href="https://www.linkedin.com/in/davi-beli-rosa/">Davi Beli</a>
             </span>
             <span class="tag">
-                <a href="https://www.linkedin.com/in/filipe-fiorio-472123302/">Filipe Fiorio</a>
+                <a target="_blank" href="https://www.linkedin.com/in/filipe-fiorio-472123302/">Filipe Fiorio</a>
             </span>
             <span class="tag">
-                <a href="https://www.linkedin.com/in/gustavo-mastelaro-681140301">Gustavo Mastelaro</a>
+                <a target="_blank" href="https://www.linkedin.com/in/gustavo-mastelaro-681140301">Gustavo Mastelaro</a>
             </span>
             <span class="tag">
-                <a href="https://www.linkedin.com/in/paulo-henrique-lisboa">Paulo Henrique</a>
+                <a target="_blank" href="https://www.linkedin.com/in/joaodavicunhaoficial/">João Davi</a>
             </span>
             <span class="tag">
-                <a href="https://www.linkedin.com/in/rodrigo-costa-garcia-a0ab34300/">Rodrigo Garcia</a>
+                <a target="_blank" href="https://www.linkedin.com/in/paulo-henrique-lisboa">Paulo Henrique</a>
+            </span>
+            <span class="tag">
+                <a target="_blank" href="https://www.linkedin.com/in/rodrigo-costa-garcia-a0ab34300/">Rodrigo Garcia</a>
             </span>
         </div>
     </footer>
